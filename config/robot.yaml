@@ -1,0 +1,10 @@
+# 机器人基本信息
+robot_info:
+  name: my_robot # 机器人的名称
+  wheels: 4 # 轮子的数量
+  sensors: # 搭载的传感器列表
+  - laser # 激光雷达
+  - camera # 相机
+
+# 其他参数
+max_speed: 2.0 # 最大速度，单位：m/s

@@ -1,0 +1,10 @@
+<launch>
+    <!-- 加载YAML参数 -->
+    <rosparam command="load" file="$(find coe_course)/config/robot.yaml"/>
+
+    <!-- 启动节点时可以引用这些参数 -->
+    <node name="param_check_node" pkg="coe_course" type="param_check.py" output="screen">
+        <!-- 传递参数到节点 -->
+        <param name="input_message" value="I am from launch file."/>
+    </node>
+</launch>
