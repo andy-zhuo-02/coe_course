@@ -1,6 +1,6 @@
 <launch>
     <!-- Nested call turtlesim_launch.launch -->
-    <include file="$(find coe_course)/launch/turtlesim_launch.launch" />
+    <include file="$(find ros_learning)/launch/turtlesim_launch.launch" />
 
     <!-- Other nodes -->
     <node pkg="rostopic" type="rostopic" name="listener" args="echo /turtle1/cmd_vel" />
