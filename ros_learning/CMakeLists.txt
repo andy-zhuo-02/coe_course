@@ -163,6 +163,7 @@ catkin_install_python(PROGRAMS
   scripts/coe_subscriber.py
   scripts/coe_publisher.py
   scripts/param_check.py
+  scripts/coe_tf2_listener.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
