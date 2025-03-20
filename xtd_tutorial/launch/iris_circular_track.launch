@@ -1,0 +1,9 @@
+<launch>
+    <!-- 启动无人机轨迹跟踪节点 -->
+    <node pkg="xtd_tutorial" type="circular_flight.py" name="circular_flight_node" output="screen"/>
+
+    <!-- 发布静态tf -->
+    <node pkg="tf" type="static_transform_publisher" name="map_to_world" args="0 0 0 0 0 0 stereo_camera_frame base_link 100"/>
+    <!-- 启动RVIZ可视化工具 -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find xtd_tutorial)/config/rviz/iris_circular_track.rviz"/>
+</launch>

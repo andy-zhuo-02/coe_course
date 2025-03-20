@@ -1,0 +1,10 @@
+<launch>
+    <!-- 启动无人机轨迹跟踪节点 -->
+    <node pkg="xtd_tutorial" type="waypoint_flight.py" name="waypoint_track_node" output="screen"/>
+
+    <!-- 发布静态tf -->
+    <node pkg="tf" type="static_transform_publisher" name="camera_link_to_base_link" args="0 0 0 0 0 0 camera_link base_link 100"/>
+
+    <!-- 启动RVIZ可视化工具 -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find xtd_tutorial)/config/rviz/iris_waypoint_track.rviz"/>
+</launch>

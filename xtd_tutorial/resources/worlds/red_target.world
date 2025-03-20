@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <!-- 添加地面 -->
+    <include>
+      <uri>model://ground_plane</uri>
+      <name>ground_plane</name>
+    </include>
+
+    <!-- 添加太阳光 -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- 添加红色立方体 -->
+    <model name="red_cube">
+      <static>true</static>
+      <pose>0 0 0.5 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+        </collision>
+        <inertial>
+          <mass>1.0</mass>
+          <inertia>
+            <ixx>1.0</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>1.0</iyy>
+            <iyz>0.0</iyz>
+            <izz>1.0</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+
+    <!-- 添加相机 -->
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>10 -10 10 0 0.5 2.5</pose>
+      </camera>
+    </gui>
+  </world>
+</sdf> 
