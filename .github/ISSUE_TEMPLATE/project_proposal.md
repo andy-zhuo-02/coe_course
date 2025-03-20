@@ -1,6 +1,6 @@
 ---
-name: 无人机仿真项目提案
-about: 提交无人机仿真课程项目提案
+name: 无人机仿真中期项目【提交课程中期的想法使用这个模板！！！】
+about: 提交无人机仿真课程中期项目
 title: '[PROJECT] '
 labels: project-proposal
 assignees: ''
